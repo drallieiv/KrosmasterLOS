@@ -1,0 +1,126 @@
+  /* Main grid */
+                 
+  table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  
+  td{
+    text-align: center;
+    width: 80px;
+    height:80px;
+    cursor: hand;
+  }
+  
+  div{
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto; 
+    text-align: center;
+  }
+  
+  div#dynamicTable{
+    width: 80%;
+  }
+  
+  div#dynamicTable table{
+    margin: auto;
+  }
+  
+  div#share{
+    position: absolute;
+    right: 5px;
+    top: 8px;
+  }
+  
+  /* Cell Style */ 
+  td.shadow{
+    background-color: #444;
+  }
+  
+  td.obstacle{
+    background-color: red;
+  }
+  
+  td.hero{
+    background-color: green;
+  }
+  
+  td.marker{
+    background: url(target.png);
+    background-size:70% 70%;
+    background-repeat : no-repeat;
+    background-position:center;
+    /*
+    background-color: purple;
+    */
+  }
+  
+  td.marker.shadow{
+    background: #444 url(target.png); 
+    background-size:70% 70%;
+    background-repeat : no-repeat;
+    background-position:center;
+  }
+  
+  td.calc{
+    color: #008;
+    font-weight: bold;
+  }
+  
+  /** Text & div Style **/
+  h1{
+    text-align:center;
+  }
+  
+  h3{
+    text-align:center;
+  }
+  
+  div.footer{
+    text-align:Left;
+    font-size: 13px;
+    width:350px;
+  }
+  
+  div.footer img{
+    float: left;
+    margin-right: 10px;
+  }
+  
+  span.notice{
+    width:50px;
+    font-weight: bold;
+  }
+  
+  #notice{
+    display:none;
+    margin:0;
+  }
+  div#QR{
+    display:none;
+  }
+  
+  @media (max-width:850px) {
+    div#share{
+      display:none;
+    }
+  }
+  
+  @media screen and (min-width: 1024px){
+    div#QR{
+      display:block;
+      position:absolute;
+      float:left;
+      width:100px;
+      height:100px;
+      margin-left:10px;
+      cursor: hand;
+      background: url(QR.png);
+      background-size:100% 100%;
+    }
+    
+    #notice{
+      display:block;
+    }
+  }

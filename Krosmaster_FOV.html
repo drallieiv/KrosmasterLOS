@@ -1,0 +1,71 @@
+<html itemscope itemtype="http://schema.org/WebApplication">
+  <head>
+    <title>Krosmaster Arena - Simulateur de ligne de vue</title>
+    <meta itemprop="name" content="Krosmaster - Simulateur de ligne de vue">
+    <meta itemprop="description" content="Cet outil permet de simuler des lignes de vues entre deux personnages dans le jeu Krosmaster Arena">
+    <meta itemprop="image" content="http://krosmaster.herazade.com/QR.png">
+    <meta itemprop="applicationCategory" content="Games">
+    
+    <link rel="stylesheet" type="text/css" href="viewLine.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="viewLineFull.js"></script>
+<script type="text/javascript" src="jquery.ba-dotimeout.js"></script>
+<script type="text/javascript">
+  gridSize= 8;
+  function changeSize(){
+    gridSize = $("#gridSize")[0].value;
+    reset();
+  }
+  function resizeQR(){
+    $("#QR").width() < 150 ? $("#QR").width(250) : $("#QR").width(100);
+    $("#QR").height($("#QR").width())
+  }
+  $(document).ready(function(){
+    initTable();    
+  });
+</script>
+  </head>
+  <body>
+    <div id="share">
+      <g:plusone annotation="inline" width="250"></g:plusone>    
+
+<script type="text/javascript">
+  window.___gcfg = {lang: 'fr'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+    </div>  
+    <h1>Simulateur de ligne de vue</h1>
+   
+    <div id="dynamicTable" class="inner">
+    </div>
+    <div id="QR" onClick="resizeQR()" title="click to zoom"></div>
+    <div class="actions">
+      <p id="notice">
+        <span class="notice">Clic Gauche :</span> Placer un Obstacle |
+        <span class="notice">Clic Droite :</span> Choisir la case vis&eacute;e
+      </p>                                               
+      <button type="button" id="reset" onClick="reset()">Reset</button>
+       | 
+      Taille de grille
+      <select id="gridSize" onChange="changeSize()">
+        <option>5</option>
+        <option selected>8</option>
+        <option>10</option>
+        <option>20</option>
+        <option>40</option>
+      </select>
+    </div>
+    <div class="footer">
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/fr/"><img alt="Licence Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/fr/88x31.png" /></a>
+      Sous licence Creative Commons Attribution</a>.
+      <br>Auteur <a href="http://twitter.com/drallieiv">@drallieiv</a> (<span itemprop="softwareVersion">v3.2b</span>)
+    </div>
+  </body>
+</html>
